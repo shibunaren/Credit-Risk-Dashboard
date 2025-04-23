@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
-import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { calculateRiskScore } from '../utils/scoring';
 import { Customer } from '../types';
 
@@ -22,13 +22,15 @@ const RiskDistributionChart = ({ data }: Props) => {
 
   return (
     <Card title="Risk Score Distribution">
-      <PieChart width={320} height={320}>
-        <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100}>
-          {pieData.map((_, i) => <Cell key={`cell-${i}`} fill={COLORS[i % COLORS.length]} />)}
-        </Pie>
-        <Tooltip />
-        <Legend />
-      </PieChart>
+      <ResponsiveContainer width="100%" height={320}>
+        <PieChart>
+          <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100}>
+            {pieData.map((_, i) => <Cell key={`cell-${i}`} fill={COLORS[i % COLORS.length]} />)}
+          </Pie>
+          <Tooltip />
+          <Legend />
+        </PieChart>
+      </ResponsiveContainer>
     </Card>
   );
 };
