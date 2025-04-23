@@ -57,6 +57,4 @@ Screenshot 2025-04-23 at 4.42.01 PM.png
 Screenshot 2025-04-23 at 4.42.36 PM.png
 Screenshot 2025-04-23 at 4.42.52 PM.png
 
-## Loom Walkthrough Video
-https://www.loom.com/share/c1a2e244adfa4a1ba23f165b3190163d?sid=0bb944a9-d31d-468d-9a0d-40e6de72b9a8
 
